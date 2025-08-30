@@ -8,8 +8,14 @@ pipeline {
     stages {
         stage('Checkout Code') {
             steps {
-                git 'https://github.com/Deepakking07/docker_jenkins1.git'
-            }
+                checkout([$class: 'GitSCM',
+                          branches: [[name: '*/main']],
+                          userRemoteConfigs: [[
+                              url: 'https://github.com/Deepakking07/docker_jenkins1.git'
+                          ]]
+                ])
+            } 
+                    
         }
 
         stage('Build Docker Image') {
