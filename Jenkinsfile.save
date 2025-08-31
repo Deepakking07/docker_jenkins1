@@ -4,8 +4,8 @@ pipeline {
     environment {
         AWS_REGION = 'us-east-1'
         AWS_ACCOUNT_ID = '382598791885'    
-        ECR_REPO_NAME = 'deepak/newrepo'           
-        IMAGE_TAG = 'latest'
+        ECR_REPO_NAME = 'shashi04/guvi_bach_2'           
+        IMAGE_TAG = 'v2'
         ECR_REGISTRY = "${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com"
         FULL_IMAGE_NAME = "${ECR_REGISTRY}/${ECR_REPO_NAME}:${IMAGE_TAG}"
     }
